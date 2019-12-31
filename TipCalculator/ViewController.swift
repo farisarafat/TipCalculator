@@ -27,10 +27,10 @@ class ViewController: UIViewController {
     @IBAction func calculatetip(_ sender: UIButton) {
         let totalBill = Float(billTextField.text!) ?? 0
         
-        if(button10.isSelected){
+        if(sender.tag == 0){
             percentageOfTip = Float(0.1)
         }
-        else if(button15.isSelected){
+        else if(sender.tag == 1){
             percentageOfTip = Float(0.15)
         }
         else{
@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         amountDue = totalBill * (1 + percentageOfTip)
         //print("Total Due: \(amountDue)")
         print(String(format: "Total Due: %.2f", amountDue))
+        print(String(format: "Tip amount is %.2f", percentageOfTip*totalBill))
     }
     
 }
