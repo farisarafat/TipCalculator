@@ -38,7 +38,15 @@ class ViewController: UIViewController {
             print(percentageOfTip)
             
         }
+        
         amountDue = totalBill * (1 + percentageOfTip)
+        totalwithTipFIeld.isEnabled = true
+        totalwithTipFIeld.text = String(format: "$ %.2f", amountDue)
+        
+        var tipamount = percentageOfTip*totalBill
+        tipField.isEnabled = true
+        tipField.text = String(format: "$ %.2f", tipamount)
+        
         //print("Total Due: \(amountDue)")
         print(String(format: "Total Due: %.2f", amountDue))
         print(String(format: "Tip amount is %.2f", percentageOfTip*totalBill))
