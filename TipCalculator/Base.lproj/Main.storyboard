@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="r2A-Rd-h2a">
-                                <rect key="frame" x="50" y="138.33333333333334" width="314" height="61.333333333333343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="r2A-Rd-h2a">
+                                <rect key="frame" x="50" y="130.33333333333334" width="314" height="69.333333333333343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Bill Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDw-oW-MWA">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="20.333333333333332"/>
@@ -25,7 +25,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g 153.23" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pg1-Hj-ygw">
-                                        <rect key="frame" x="0.0" y="27.333333333333314" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="35.333333333333314" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
@@ -117,15 +117,26 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ne-7h-Vx4" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="812" width="320" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5jT-wH-9mQ"/>
+                                    <constraint firstAttribute="width" constant="320" id="y7W-Y8-2dI"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="770-nK-3Ic" firstAttribute="top" secondItem="xZT-gO-DuB" secondAttribute="bottom" constant="85" id="2Dr-NR-9pU"/>
                             <constraint firstItem="xZT-gO-DuB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Ve-Dh-DWI"/>
+                            <constraint firstItem="3ne-7h-Vx4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HPc-ND-WCg"/>
                             <constraint firstItem="xZT-gO-DuB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="NMs-fS-qBn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3ne-7h-Vx4" secondAttribute="bottom" id="O0F-HV-TZb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xZT-gO-DuB" secondAttribute="trailing" constant="100" id="Sgv-Nf-z3a"/>
                             <constraint firstItem="r2A-Rd-h2a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="TD6-xE-eaj"/>
                             <constraint firstItem="xZT-gO-DuB" firstAttribute="top" secondItem="r2A-Rd-h2a" secondAttribute="bottom" constant="50" id="VY2-6D-ffO"/>
+                            <constraint firstItem="3ne-7h-Vx4" firstAttribute="top" secondItem="770-nK-3Ic" secondAttribute="bottom" constant="40" id="YZ4-0o-dps"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r2A-Rd-h2a" secondAttribute="trailing" constant="50" id="gep-9A-2Yq"/>
                             <constraint firstAttribute="bottomMargin" secondItem="770-nK-3Ic" secondAttribute="bottom" constant="90" id="tfM-EH-zmC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="770-nK-3Ic" secondAttribute="trailing" constant="50" id="wCu-D3-mNn"/>
@@ -134,6 +145,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="3ne-7h-Vx4" id="1Ya-b9-W5T"/>
                         <outlet property="billTextField" destination="Pg1-Hj-ygw" id="B8H-bi-3cR"/>
                         <outlet property="button10" destination="J4v-qJ-7dN" id="YpZ-fB-uwr"/>
                         <outlet property="button15" destination="axh-wm-iwo" id="kfG-IH-3fW"/>

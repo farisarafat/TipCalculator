@@ -5,8 +5,12 @@
 //  Created by Faris Arafat on 12/31/19.
 //  Copyright © 2019 D&F. All rights reserved.
 //
+//Ad ID: ca-app-pub-4376737116705267~8683346553
+//Production UnitID: ca-app-pub-4376737116705267/6001342899
+//Test Unit ID: ca-app-pub-3940256099942544/2934735716
 
 import UIKit
+import GoogleMobileAds
 
 class ViewController: UIViewController {
     
@@ -16,12 +20,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var button15: UIButton!
     @IBOutlet weak var button10: UIButton!
     @IBOutlet weak var billTextField: UITextField!
+    @IBOutlet weak var bannerView: GADBannerView!
+    
     
     var percentageOfTip = Float(0.0)
     var amountDue = Float(0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        
+        bannerView.delegate = self
     }
     
     @IBAction func calculatetip(_ sender: UIButton) {
@@ -52,5 +64,16 @@ class ViewController: UIViewController {
         print(String(format: "Tip amount is %.2f", percentageOfTip*totalBill))
     }
     
+}
+
+extension ViewController: GADBannerViewDelegate{
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Received Ad")
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print(error)
+    }
 }
 
