@@ -29,14 +29,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-4376737116705267/6001342899"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         
         bannerView.delegate = self
+        
+        button20.layer.cornerRadius = 25.0
+        button20.backgroundColor = UIColor(hue: 0.7167, saturation: 1, brightness: 0.7, alpha: 1.0)
+        button10.layer.cornerRadius = 25.0
+        button10.backgroundColor = UIColor(hue: 0.7167, saturation: 1, brightness: 0.7, alpha: 1.0)
+        button15.layer.cornerRadius = 25.0
+        button15.backgroundColor = UIColor(hue: 0.7167, saturation: 1, brightness: 0.7, alpha: 1.0)
     }
     
     @IBAction func calculatetip(_ sender: UIButton) {
+        sender.pulsate()
         let totalBill = Float(billTextField.text!) ?? 0
         
         if(sender.tag == 0){
@@ -55,7 +63,7 @@ class ViewController: UIViewController {
         totalwithTipFIeld.isEnabled = true
         totalwithTipFIeld.text = String(format: "$ %.2f", amountDue)
         
-        var tipamount = percentageOfTip*totalBill
+        let tipamount = percentageOfTip*totalBill
         tipField.isEnabled = true
         tipField.text = String(format: "$ %.2f", tipamount)
         
