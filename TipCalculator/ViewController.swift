@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var button20: UIButton!
     @IBOutlet weak var button15: UIButton!
     @IBOutlet weak var button10: UIButton!
-    @IBOutlet weak var billTextField: UITextField!
+    @IBOutlet weak var billTextField: UITextField!{
+        didSet { billTextField?.addDoneCancelToolbar() }
+    }
     @IBOutlet weak var bannerView: GADBannerView!
     
     

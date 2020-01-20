@@ -17,6 +17,7 @@
 		69C0395223BBBC4D00E9C547 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0395123BBBC4D00E9C547 /* TipCalculatorTests.swift */; };
 		69C0395D23BBBC4D00E9C547 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C0395C23BBBC4D00E9C547 /* TipCalculatorUITests.swift */; };
 		69C5ABB023D503EF00F5160C /* UIButtonExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5ABAF23D503EF00F5160C /* UIButtonExtention.swift */; };
+		69C5ABB423D62BF700F5160C /* UITextFExten.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C5ABB323D62BF700F5160C /* UITextFExten.swift */; };
 		CE0B9D8E1A6CA3FFCCF04CC9 /* Pods_TipCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C458264C5467E997682E3B /* Pods_TipCalculator.framework */; };
 		F36A5EF3F3207BF60F3C566C /* Pods_TipCalculatorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E086137B6111B7AB6345D33 /* Pods_TipCalculatorTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		69C0395C23BBBC4D00E9C547 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		69C0395E23BBBC4D00E9C547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69C5ABAF23D503EF00F5160C /* UIButtonExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtention.swift; sourceTree = "<group>"; };
+		69C5ABB323D62BF700F5160C /* UITextFExten.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFExten.swift; sourceTree = "<group>"; };
 		79C95273E9070ADE42D6C5F2 /* Pods_TipCalculator_TipCalculatorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipCalculator_TipCalculatorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89C458264C5467E997682E3B /* Pods_TipCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E086137B6111B7AB6345D33 /* Pods_TipCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 				69C0393A23BBBC4900E9C547 /* AppDelegate.swift */,
 				69C0393C23BBBC4900E9C547 /* SceneDelegate.swift */,
 				69C0393E23BBBC4900E9C547 /* ViewController.swift */,
+				69C5ABB323D62BF700F5160C /* UITextFExten.swift */,
 				69C5ABAF23D503EF00F5160C /* UIButtonExtention.swift */,
 				69C0394023BBBC4900E9C547 /* Main.storyboard */,
 				69C0394323BBBC4C00E9C547 /* Assets.xcassets */,
@@ -410,6 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C5ABB423D62BF700F5160C /* UITextFExten.swift in Sources */,
 				69C0393F23BBBC4900E9C547 /* ViewController.swift in Sources */,
 				69C0393B23BBBC4900E9C547 /* AppDelegate.swift in Sources */,
 				69C5ABB023D503EF00F5160C /* UIButtonExtention.swift in Sources */,
