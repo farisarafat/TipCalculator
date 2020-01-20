@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculatetip(_ sender: UIButton) {
-        sender.pulsate()
+        sender.shake()
         let totalBill = Float(billTextField.text!) ?? 0
         
         if(sender.tag == 0){
@@ -74,6 +74,9 @@ class ViewController: UIViewController {
         print(String(format: "Tip amount is %.2f", percentageOfTip*totalBill))
     }
     
+    @IBAction func PulseButton(_ sender: UIButton) {
+        sender.shake()
+    }
 }
 
 extension ViewController: GADBannerViewDelegate{
@@ -85,5 +88,6 @@ extension ViewController: GADBannerViewDelegate{
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print(error)
     }
+    
 }
 
