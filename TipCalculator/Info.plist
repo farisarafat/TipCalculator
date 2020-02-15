@@ -53,5 +53,7 @@
 	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-4376737116705267~8683346553</string>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 </dict>
 </plist>
